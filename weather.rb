@@ -2,14 +2,14 @@ require 'open-uri'
 require 'wunderground'
 require 'erb'
 
-
+	
 	@w_api = Wunderground.new("a00a673d4ceba9c5")
 	# @weather_data = @w_api.forecast_for("WA","Spokane")
 	@weather_data = @w_api.forecast_for("Canada","Calgary")
 
 
 
-	simpleForecast = @weather_data.values_at("forecast")[0].values_at("simpleforecast")[0].values_at("forecastday")[0][0]
+	simpleForecast = @weather_data.values_at("forecast")[0].values_at("simpleforecast")[0].values_at("forecastday")[0]
 
 	weatherforFourDaysFourNights = @weather_data.values_at("forecast")[0].values_at("txt_forecast")[0].values_at("forecastday")[0]
 
@@ -23,7 +23,13 @@ require 'erb'
 	@night4 =weatherforFourDaysFourNights[7]
 
 	# @weather_data['forecast'].first['simpleforecast']
-	puts simpleForecast['date']['tz_long']
+	@completeSummary_Day1 =  simpleForecast[0]
+	@completeSummary_Day2 =  simpleForecast[1]
+	@completeSummary_Day3 =  simpleForecast[2]
+	@completeSummary_Day4 =  simpleForecast[3]
+
+	# puts @completeSummary_Day2
+	puts simpleForecast[0]['date']['tz_long']
 
 	@dateInformation_Day1 = @weather_data.values_at("forecast")[0].values_at("simpleforecast")[0].values_at("forecastday")[0][0].values_at("date")[0]
 	@dateInformation_Day2 = @weather_data.values_at("forecast")[0].values_at("simpleforecast")[0].values_at("forecastday")[0][1].values_at("date")[0]
@@ -39,10 +45,11 @@ require 'erb'
 	@month_Day1 = @dateInformation_Day1.values_at("monthname")[0]
 	@day_Day1 = @dateInformation_Day1.values_at("day")[0]
 
-	@highTemperature_celsius = simpleForecast.values_at("high")[0].values_at("celsius")[0]
-	@lowTemperature_celsius = simpleForecast.values_at("low")[0].values_at("celsius")
+	@highTemperature_celsius = simpleForecast[0].values_at("high")[0].values_at("celsius")[0]
+	@lowTemperature_celsius = simpleForecast[0].values_at("low")[0].values_at("celsius")
 
-	
+	# Location = ""
+	# Location.create params[:location][:city]
 	
 
 	html_template = File.read('index.erb.html')
