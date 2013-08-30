@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+         <meta charset="utf-8">
+         <title>Weather App</title>
+         <link rel="stylesheet" href="custom_style.css">
+         <link rel="stylesheet" href="css/style.css">
+         
+ </head>
+ <body>
+         
+ <div class="container">
+         
+         <div class="hero-unit">
+            <div class="header">
+         <h1>What's the Weather Like?</h1>
+
+         <img src="partly-cloudy-icon.png"/>
+         <!-- <p>Hello guys i am a ".hero-unit" and you can use me if you wanna say something important.</p> -->
+        
+
+        <!--  <div class="span6">
+         <p>I do not like to see clouds that turn,
+           it makes my tummy jiggle and burn.
+           I do not like those claps of thunder,
+               that make my shoes rattle from under.</p>
+         </div> -->
+         <h3>Enter your city</h3>
+               <form action="weather.rb" method="post" class="well form-search">  
+               <input id="location_city" name="location[city]" value="Toronto" type="text" class="input-medium search-query" >  
+               <button type="submit" class="btn">Go!</button>  
+         </form>
+
+         
+
+         </div>
+         <!-- <p><a class="btn btn-primary btn-large">Super important &raquo;</a></p> -->
+         </div><!-- .hero-unit -->
+<div class="row">
+      <div class="span12">
+          <h2> <%= @weekday_Day1 %> <%= @month_Day1 %> <%= @day_Day1 %> </h2>
+      </div>
+</div>
+<div class="row">
+          <div class="span8">
+
+               
+                 
+               <div id="todays_temperature">
+                  <h1>Today</h1>
+
+                </div>  
+
+               <div id="circle-blue">
+                  <p>current</p>
+                  <h1> <%= @highTemperature_celsius %>&#176;C</h1>
+                  <img src= <%= @icon_url_Day1 %> /> 
+               </div>
+         </div>
+            <div id="todays_temperature">
+               <h3>Toronto</h3>
+            </div>
+
+         <div class="span4">
+            <div class="content_right">
+            <div class="row">
+                 <h2><%=@day2.values_at("title")[0] %></h2>
+                  <p> <img src= <%= @icon_url_Day2 %> />
+                  <%=@completeSummary_Day2['high']['celsius']%>&#176;C</p>
+         
+            </div><!-- .span4 -->
+   
+            <div class="row">
+                 <h2><%=@day3.values_at("title")[0] %></h2>
+                  <p> <img src= <%= @icon_url_Day3 %> />
+                     <%=@completeSummary_Day3['high']['celsius']%>&#176;C</p>
+            </div> <!-- .span4 -->  
+
+            <div class="row">
+                  <h2><%=@day4.values_at("title")[0] %></h2>
+                  <p> <img src= <%= @icon_url_Day4 %> />
+                     <%=@completeSummary_Day4['high']['celsius']%>&#176;C</p>
+            </div> <!-- .span4 --> 
+             </div>
+
+         </div>
+
+         
+
+</div>
+
+ <!-- <div class="row"> -->
+         <div id="footer">
+            <p></p>
+         </div>
+ <!-- </div> -->
+
+
+
+
+
+ </div><!-- .container -->
+     
+ </body>
+</html>

@@ -1,0 +1,154 @@
+#icon {
+
+	width: 150%;
+}
+/*#todays_temperature{
+	width: 100%;
+	background-color: #909090;
+}*/
+
+.header h1{
+		font-size: 10.0em;
+		font-weight: 500;
+		color: #707070;
+		opacity: 0.8;
+		position: relative;
+		/*text-align: center;*/
+		top: 15%;
+}
+
+.header h3{
+		font-size: 1.2em;
+		font-weight: 500;
+		color: #383838;
+		opacity: 0.8;
+		position: relative;
+		/*text-align: center;*/
+		top: 15%;
+}
+
+.header img{
+	float: right;
+	width: 35%;
+	bottom: 15px;
+	opacity: 0.85;
+}
+
+#todays_temperature h1{
+		font-size: 15.0em;
+		font-weight: 500;
+		color: #009966;
+		opacity: 0.8;
+		position: relative;
+		float: left;
+		bottom: 20%;
+		padding:25px 25px;
+    	
+		/*text-align: center;*/
+		/*top: 40%;*/
+}
+
+#todays_temperature h2{
+	bottom: 10%;
+	padding: 15px 15px;
+}
+
+
+#todays_temperature h3{
+		font-size: 5.0em;
+		font-weight: 500;
+		color: #9966CC;
+		opacity: 0.8;
+		position: relative;
+		float: left;
+		bottom: 5%;
+		padding:5px 5px;
+}
+
+#circle-blue {
+	border-radius: 50%;
+	width: 260px;
+	height: 260px; 
+	background-color: #3399FF	;
+	position: relative;
+	top: 60px;
+	left: 38%;
+	padding-left:15px;
+    padding-right:15px;
+    padding-top: 15px;
+	border: 3px solid grey;
+	opacity: 0.7;
+	/* width and height can be anything, as long as they're equal */
+}
+
+#circle-blue h1 {
+		/*display: inline-block;*/
+		font-size: 6.0em;
+		font-weight: 500;
+		color: #383838;
+		opacity: 0.8;
+		position: relative;
+		text-align: center;
+		bottom: 5%;
+
+}
+
+#circle-blue p {
+		/*display: inline-block;*/
+		font-size: 1.8em;
+		font-weight: 500;
+		color: #484848;
+		opacity: 0.8;
+		position: relative;
+		text-align: center;
+		bottom: 10%;
+
+}
+
+#circle-blue img {
+		/*display: inline-block;*/
+		position: relative;
+		bottom: 60%;
+		left: 30%;
+		width: 50%;
+}
+
+.content_right{
+	border-left: 4px solid lightgrey;
+	padding-right: 20px;
+	padding-left: 40px;
+}
+
+.content_right p{
+		font-size: 1.4em;
+		font-weight: 500;
+		color: #484848;
+		opacity: 0.9;
+		position: relative;
+		float: left;
+		/*bottom: 10%;*/
+}
+
+#footer{
+	background: #FF69B4;
+	opacity: 0.8;
+	box-shadow: inset 0 -10px 10px -10px rgba(0,0,0,.05);
+	width: 100%;
+	height: 60px;
+	border-radius: 5px;
+}
+
+.hero-unit p{
+	font-family: cursive;
+	font-size: 0.8em;
+	font-weight: 500;
+	color: #FFFFFF;
+	opacity: 0.9;
+	position: relative;
+	float: right;
+}
+
+.hero-unit form{
+	width: 260px;
+	border-radius: 15px;
+}
